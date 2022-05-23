@@ -1,13 +1,10 @@
 #include<iostream>
 using namespace std;
+int factorial(int n){
+    if(n==0||n==1)return 1;
+    return n*factorial(n-1);
+}
 int main(){
-    int n;
-    cin>>n;
-    int fact = 1;
-    for(int i =2;i<=n;i++){
-        fact*=i;
-    }
-    if(n>=0){
-        cout<<fact;
-    }
+    cout<<factorial(5);
+    return 0;
 }

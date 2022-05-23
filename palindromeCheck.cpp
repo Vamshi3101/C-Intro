@@ -1,14 +1,13 @@
 #include<iostream>
 using namespace std;
+bool palindromeCheck(string &s,int l,int h){
+    if(l>=h)return true;
+    return (s[l]==s[h])&& palindromeCheck(s,l+1,h-1);
+
+}
 int main(){
-    string a;
-    cin>>a;
-    for(int i =0;i<a.length()/2;i++){
-        if(a[i]!=a[a.length()-1-i]){
-            cout<<"No";
-            return 0;
-        }
-    }
-    cout<<"Yes";
+    string s;
+    cin>>s;
+    cout<<boolalpha<<palindromeCheck(s,0,s.length()-1);
     return 0;
 }
